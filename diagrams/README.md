@@ -110,6 +110,8 @@ Tools:
 - PowerPoint
 - Canva
 - Figma
+- gemini ai
+- gpt ai
 
 ---
 
