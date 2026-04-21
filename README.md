@@ -2,168 +2,217 @@
 
 ## Overview
 
-This project presents a Zero Trust security architecture designed for a donor-funded NGO operating across multiple countries in high-risk environments. The organization supports remote staff, field operations, cloud collaboration, third-party consultants, and sensitive donor / beneficiary data.
+This repository presents a practical Zero Trust security architecture designed for a donor-funded NGO operating across multiple countries in high-risk, conflict-affected, and digitally hostile environments.
 
-Traditional perimeter-based security models are no longer sufficient for modern distributed organizations. This project applies a Zero Trust model based on the principle:
+It combines:
+
+- security architecture design
+- threat modeling
+- security controls engineering
+- MITRE ATT&CK adversary mapping
+- fraud risk management
+- compliance alignment
+- executive communication
+
+This project demonstrates how modern security can protect distributed humanitarian operations where traditional perimeter-based models fail.
+
+---
+
+# Why This Project Matters
+
+Many NGOs operate with:
+
+- remote field teams
+- shared or unmanaged devices
+- sensitive beneficiary data
+- donor reporting obligations
+- third-party vendors and partners
+- elevated phishing and fraud risk
+
+Traditional trust models assume internal environments are safe.
+
+This project replaces that assumption with:
 
 > Never Trust. Always Verify.
 
-The objective is to reduce risk, improve resilience, strengthen governance, and secure access across users, devices, applications, and data.
+---
+
+# Repository Structure
+
+```text id="j3n8zy"
+Zero-Trust-NGO-Security/
+│── README.md
+│
+├── architecture/
+├── threat-model/
+├── controls/
+├── compliance/
+├── mitre/
+├── executive-summary/
+├── research/
+└── diagrams/
+```
+
+# Core Modules
+
+## Architecture
+
+Design of Zero Trust operating model for distributed NGO environments.
+
+📄 `architecture/zero-trust-architecture.md`
+
+### Includes:
+
+- identity perimeter
+- device trust model
+- ZTNA access design
+- cloud security integration
+- phased roadmap
 
 ---
 
-## Project Scenario
+## Threat Model
 
-The NGO operates across three countries with:
+Realistic adversaries and attack scenarios.
 
-- Headquarters staff
-- Country offices
-- Field officers in remote areas
-- Finance and HR teams
-- Third-party consultants
-- Cloud-hosted productivity tools
-- Legacy internal systems
+📄 `threat-model/threat-analysis.md`
 
-### Operational Constraints
+### Includes:
 
-- Weak or inconsistent connectivity
-- Shared or unmanaged devices
-- High phishing exposure
-- Insider risk
-- Urgent operational access needs
-- Donor compliance expectations
+- nation-state threats
+- phishing campaigns
+- insider abuse
+- device seizure
+- partner compromise
 
 ---
 
-## Security Objectives
+## Security Controls
 
-- Protect donor and beneficiary data
-- Secure remote and hybrid workforce access
-- Enforce least privilege
-- Prevent lateral movement
-- Improve visibility and monitoring
-- Strengthen incident response readiness
-- Increase donor confidence and audit readiness
+Operational controls mapped to architecture.
 
----
+📄 `controls/security-controls.md`
 
-# Zero Trust Core Principles
+### Includes:
 
-This architecture is built around the following principles:
-
-1. Never trust by default  
-2. Verify every user and device  
-3. Grant least-privilege access  
-4. Use continuous monitoring  
-5. Assume breach scenarios  
-6. Limit blast radius through segmentation  
-7. Protect data wherever it resides
+- MFA
+- PAM
+- encryption
+- segmentation
+- logging
+- DLP
+- device compliance
 
 ---
 
-# Architecture Layers
+## Compliance Mapping
 
-## 1. Identity Layer
+Framework alignment for governance readiness.
 
-Identity becomes the primary security perimeter.
+📄 `compliance/framework-mapping.md`
 
-Controls:
+### Mapped to:
 
-- Single Sign-On (SSO)
-- Multi-Factor Authentication (MFA)
-- Role-Based Access Control (RBAC)
-- Conditional Access Policies
-- Privileged Access Management (PAM)
-
----
-
-## 2. Device Trust Layer
-
-Only trusted or compliant devices receive appropriate access.
-
-Controls:
-
-- Device registration
-- Endpoint posture checks
-- Patch compliance validation
-- Disk encryption checks
-- Restricted unmanaged device access
+- NIST CSF
+- NIST SP 800-207
+- ISO 27001
+- CIS Controls v8
 
 ---
 
-## 3. Access Control Layer
+## MITRE Layer
 
-Access is granted per application, not broad network trust.
+Threat behavior + detections + fraud risk.
 
-Controls:
+📄 `mitre/attack-mapping.md`  
+📄 `mitre/detection-use-cases.md`  
+📄 `mitre/fraud-framework.md`
 
-- Secure access gateway
-- Risk-based session decisions
-- Re-authentication for sensitive systems
-- Temporary privileged access
-- Time-bound consultant access
+### Includes:
 
----
-
-## 4. Network Segmentation Layer
-
-Limits attacker movement and reduces internal exposure.
-
-Controls:
-
-- Finance network separation
-- HR system isolation
-- Admin zone segregation
-- East-West traffic restrictions
-- Microsegmentation policies
+- ATT&CK techniques
+- SOC detections
+- fraud scenarios
+- donor / financial abuse controls
 
 ---
 
-## 5. Data Protection Layer
+## Executive Layer
 
-Protects sensitive information at all times.
+Leadership-facing security summary.
 
-Controls:
+📄 `executive-summary/ngo-security-brief.md`
 
-- Encryption at rest
-- Encryption in transit
-- Data classification
-- Controlled downloads
-- Secure backups
-- Access logging
+### Designed for:
 
----
-
-## 6. Monitoring & Detection Layer
-
-Visibility is essential to Zero Trust.
-
-Controls:
-
-- Centralized SIEM logging
-- Identity telemetry
-- Endpoint telemetry
-- Cloud audit logs
-- Alert triage workflows
-- Incident response playbooks
+- executives
+- boards
+- donors
+- auditors
 
 ---
 
-# High-Level Architecture Flow
+## Research Layer
 
-```text
-Users
- ↓
-Devices
- ↓
-Device Validation
- ↓
-Identity Provider (SSO / MFA / RBAC)
- ↓
-Policy Engine / Secure Gateway
- ↓
-Applications & Data
- ↓
-Central Logging / SIEM
- ↓
-SOC / Incident Response
+Conceptual Zero Trust foundation.
+
+📄 `research/zero-trust-principles.md`
+
+---
+
+# Key Security Outcomes
+
+This architecture enables:
+
+- reduced phishing impact
+- controlled privileged access
+- stronger data protection
+- lower fraud exposure
+- improved detection capability
+- faster incident response
+- secure operations across high-risk regions
+
+---
+
+# Technologies & Concepts Referenced
+
+- Zero Trust Architecture
+- SIEM / SOC Operations
+- Wazuh / Splunk / Sentinel concepts
+- IAM / MFA / PAM
+- MITRE ATT&CK
+- CSPM
+- Security Automation (n8n)
+
+---
+
+# Portfolio Value
+
+This project demonstrates capability in:
+
+- security architecture
+- threat modeling
+- blue team thinking
+- cloud governance
+- executive reporting
+- control design
+- standards alignment
+
+---
+
+# Ideal Role Alignment
+
+Relevant to:
+
+- SOC Analyst
+- Detection Engineer
+- Security Engineer
+- Cloud Security Analyst
+- Governance / Risk Analyst
+- Security Consultant
+
+---
+
+# Author Note
+
+Created as a practical portfolio case study to demonstrate modern cybersecurity thinking applied to real-world humanitarian and distributed operations.
